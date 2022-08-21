@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Reconocimiento Facial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+  <div class="container">
+    
+    <center>
+      <h3 class="btn btn-default heading">RECONOCIMIENTO DE IMAGEN</h3>
+      <br><br>
+
+      <p style="font-size: 22px;">El modelo está entrenado para identificar los siguientes objetos: </p>
+
+      <b class="name_of_objects">
+        Mama
+        <hr>
+        Papa
+        <hr>
+        Hermano
+        <hr>
+        Hermana Menor
+        <hr>
+        Hermana Mayor
+        <hr>
+      </b>
+
+      <label>Vista de la cámara: </label>
+      <div id="camera"></div>
+      <br><br>
+      <div id="result"></div>
+      <br><br>
+      <button id="button_snapshot" onclick="take_snapshot();" class="btn btn-info">Capturar imagen</button>
+      <br><br>
+      <button id="button_check" onclick="check();" class="btn btn-success">Identificar imagen</button>
+      <br><br>
+
+      <p style="font-size: 22px;">Miembro de la familia:  <span id="result_objects_name"></span></p>
+      <p style="font-size: 22px;">Exactitud: <span id="result_objects_accuracy"></span> </p>
+      <br>
+      <br>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
